@@ -1789,7 +1789,7 @@ def test():
                         input = input.to(device)
                         recon_image, CBR, SNR, mse, loss_G = net(input, SNR, rate)
                         torchvision.utils.save_image(recon_image,
-                                                     os.path.join("/kaggle/working/recon/", f"{names[0]}"))
+                                                     os.path.join("./recon/", f"{names[0]}"))
                         elapsed.update(time.time() - start_time)
                         cbrs.update(CBR)
                         snrs.update(SNR)
